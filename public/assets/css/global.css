@@ -1,0 +1,112 @@
+/**
+ * LAYOUT
+ */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.page-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page-header {
+  height: 124px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.page-content {
+  min-height: 100%;
+  padding-top: 124px;
+  padding-bottom: 70px;
+  margin-bottom: -50px;
+}
+
+.page-footer {
+  height: 50px;
+}
+
+
+/**
+ * HEADER
+ */
+
+.page-header .page-wrap {
+     border-bottom: 2px solid #CCC;
+     padding-bottom: 5px;
+}
+
+.page-header .logo {
+    padding: 12px;
+}
+
+.page-header .logo, .page-title {
+    display: block;
+    text-align: center;
+}
+
+.page-title {
+    font-family: Arial;
+}
+
+.page-header .coyote-logo {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+/**
+ * NAV
+ */
+
+.page-nav {
+    position: absolute;
+    top: 170px;
+    left: 0;
+    color: red;
+}
+
+.page-nav ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.page-nav a {
+    color: #F00;
+    text-decoration: none;
+}
+
+.page-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/**
+ * CONTENT
+ */
+
+.page-content p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/**
+ * FOOTER
+ */
+
+.page-footer {
+    text-align: center;
+    font-size: smaller;
+}
