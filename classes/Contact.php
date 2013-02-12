@@ -11,8 +11,8 @@ class Contact
 	 */	
 	protected $data = array(// protected is available in other classes unlike private,public is too much
 		'id' => null,
-		'firstname' => null,
-		'lastname' => null,
+		'firstName' => null,
+		'lastName' => null,
 		'phone' => null,
 		'address' => null,
 		'city' => null,

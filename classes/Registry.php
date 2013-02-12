@@ -16,7 +16,7 @@ class Registry
 		return self::$values['database']; 
 	}
 	
-	protected function getDatabaseConfigs()
+	protected static function getDatabaseConfigs()
 	{
 		if ($_SERVER['HTTP_HOST'] == 'localhost') {
 			$host = 'localhost';

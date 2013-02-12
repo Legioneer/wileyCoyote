@@ -10,12 +10,25 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 /*
  * PROCESSING
- * PROCESS contact if form submitted
- */ 
+ */
+
 $isSubmitted = array_key_exists('contact', $_POST);
-if ($isSubmitted){
+if ($isSubmitted) {
 	$contact = new Contact($_POST['contact']);
-	$contact->save();
+	switch ($_POST['action']) {
+		case 'save':
+			$contact->save();
+			break;
+		case 'search':
+			$contact->validate();
+			$data = array_filter($contact->toArray(), function ($value) {
+				return !empty($value);
+			});
+			$result = Registry::getDatabase()->select('contact', $data);
+			$data = (count($result) > 0) ? array_shift($result) : array();
+			$contact = new Contact($data);
+			break;
+	}
 } else {
 	$contact = new Contact(array());
 }

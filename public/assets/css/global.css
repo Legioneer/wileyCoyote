@@ -110,3 +110,33 @@ body {
     text-align: center;
     font-size: smaller;
 }
+
+/**
+ * CONTACT FORM
+ */
+
+.contact-form label {
+	width: 100%;
+	text-align: right;
+	display: block;
+}
+
+.contact-form label input, .contact-form label select {
+	width: 80%;
+}
+
+.contact-form div {
+	float: left;
+	width: 85%;
+}
+
+.contact-form .actions {
+	width: 15%;
+}
+
+.contact-form .actions button {
+	width: 70px;
+	display: block;
+	float: right;
+	clear: both;
+}
