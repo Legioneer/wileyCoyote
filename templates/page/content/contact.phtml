@@ -1,25 +1,26 @@
 <form action="" method="post" id="Addressbook">
-    <table cellspacing="1" cellpadding="0">
-        <tbody><tr>
-            <td colspan="3">
-                Please feel free to enter the name or phone number of the person you are looking 
-                for to get the contact information.</td>
-        </tr>
-        <tr>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-        </tr>
-        <tr>
+
+	<p>Please feel free to enter the name or phone number of the person 
+	you are looking for to get the contact information.</p>
+
+	<p>
+		<label>First Name <input type="text" name="contact[firstName]"></label>
+		<br /><label>Last Name <input type="text" name="contact[lastName]"></label>
+		<br /><label>Phone Number <input type="text" name="contact[phone]"></label>
+		<br /><label>Address <input type="text" name="contact[address]"></label>
+		<br /><label>City <input type="text" name="contact[city]"></label>
+		<br /><label>State <input type="text" name="contact[phone]"></label>
+		<br /><label>Phone Number <input type="text" name="contact[phone]"></label>
+		<br /><label>Phone Number <input type="text" name="contact[phone]"></label>
+	</p>
+	<table cellspacing="1" cellpadding="0">
+        <tbody>
             <td align="right">
                 First Name</td>
             <td align="left">
                <input type="text" size="35" name="contact[firstName]" id="fname"> </td>
             <td>
-                <input type="submit" name="requestType" value="Search" id="button_Search"></td>
+                <input type="submit" name="action" value="Search" id="button_Search"></td>
         </tr>
         <tr>
             <td align="right">
@@ -27,15 +28,13 @@
             <td align="left">
                 <input type="text" size="35" name="contact[lastName]" id="lname"></td>
             <td>
-                <input type="submit" name="requestType" value="Update" id="Button_update"></td>
+                <input type="submit" name="action" value="Save" id="Button_save"></td>
         </tr>
         <tr>
             <td align="right">
                 Phone Number</td>
             <td align="left">
                 <input type="text" size="35" name="contact[phone]" id="phone"></td>
-            <td>
-                <input type="submit" name="requestType" value="Create" id="Button_Input"></td>
         </tr>
         <tr>
             <td align="right">
