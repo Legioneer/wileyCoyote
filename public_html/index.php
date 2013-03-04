@@ -5,7 +5,7 @@
  */
 
 // autoloading
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/not_really_public/vendor/autoload.php';
 
 
 /*
@@ -20,7 +20,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
  */
 
  // get template path
-$templatePath = __DIR__ . '/../templates';
+$templatePath = __DIR__ . '/not_really_public/templates';
 
 // instantiate template for content
 $content = new Template($templatePath . '/page/content/index.phtml');
