@@ -1,0 +1,9 @@
+<h2>Catalog</h2>
+
+<p>Please select one of our items:</p>
+
+<select name="productId">
+<?php foreach ($productSelectOptions as $value => $text): ?>
+	<option value="<?php echo $value ?>"<?php if ($productId == $value): ?> selected="selected"<?php endif ?>><?php echo $text ?></option>
+<?php endforeach ?>
+</select>

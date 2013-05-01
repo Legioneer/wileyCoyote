@@ -22,7 +22,7 @@ class Registry
 			$host = 'localhost';
 			$username = 'root';
 			$password = '';
-			$databaseName = 'test';
+			$databaseName = 'wileyCoyote';
 		} else {
 			$host = 'localhost';
 			$username = 'webuser14';
