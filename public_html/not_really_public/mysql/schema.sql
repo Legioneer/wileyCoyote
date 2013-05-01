@@ -9,4 +9,12 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `zip` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `contact_firstName_lastName_UNIQUE` (`firstName`,`lastName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+);
+
+CREATE TABLE IF NOT EXISTS `product` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(255) NOT NULL ,
+  `description` TEXT NOT NULL ,
+  `price` DECIMAL(10,2) NOT NULL ,
+  PRIMARY KEY (`id`)
+);
