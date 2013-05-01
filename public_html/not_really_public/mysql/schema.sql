@@ -18,3 +18,26 @@ CREATE TABLE IF NOT EXISTS `product` (
   `price` DECIMAL(10,2) NOT NULL ,
   PRIMARY KEY (`id`)
 );
+
+INSERT INTO product (`name`) VALUES
+('Anvil'),
+('Axle Grease'),
+('Atom Re-Arranger'),
+('Bed Springs'),
+('Bird Seed'),
+('Blasting Powder'),
+('Cork'),
+('Dsintigration Pistol'),
+('Earthquake Pills'),
+('Female Roadrunner costume'),
+('Giant Rubber Band'),
+('Instant Girl'),
+('Iron Carrot'),
+('Jet Propelled Unicycle'),
+('Out-Board Motor'),
+('Railroad Track'),
+('Rocket Sled'),
+('Super Outfit'),
+('Time Space Gun'),
+('X-Ray');
+
