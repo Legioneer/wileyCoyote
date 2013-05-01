@@ -38,21 +38,23 @@ class Contact
 	
 	public function validate()
 	{
-		$valid = true;
 		$messages = array();
 
 		// validate firstName
 		if (!isset($this->data['firstName'])) {
-			$valid = false;
-			$messages[] = 'First name is required.';
+			$messages['firstName'] = 'First name is required.';
+		} else if (preg_match('/^[a-zA-Z]+$/', $this->data['firstName']) != 1) {
+			$messages['firstName'] = 'First name must contain only uppercase and lowercase letters.';
 		}
 
 		// validate lastName
 		if (!isset($this->data['lastName'])) {
-			$valid = false;
-			$messages[] = 'Last name is required.';
+			$messages['lastName'] = 'Last name is required.';
+		} else if (preg_match('/^[a-zA-Z]+$/', $this->data['lastName']) != 1) {
+			$messages['lastName'] = 'Last name must contain only uppercase and lowercase letters.';
 		}
-		
+
+		$valid = count($messages) > 0;
 		if (!$valid) {
 			$exception = new ValidationException();
 			$exception->setMessages($messages);
