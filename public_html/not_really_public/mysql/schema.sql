@@ -1,3 +1,4 @@
+DROP TABLE `contact`;
 CREATE TABLE IF NOT EXISTS `contact` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` varchar(255) NOT NULL,
@@ -11,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
   UNIQUE KEY `contact_firstName_lastName_UNIQUE` (`firstName`,`lastName`)
 );
 
+DROP TABLE `product`;
 CREATE TABLE IF NOT EXISTS `product` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(255) NOT NULL ,
