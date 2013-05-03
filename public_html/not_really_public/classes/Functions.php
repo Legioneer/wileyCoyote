@@ -20,4 +20,9 @@ class Functions
 		header('location: ' . $url);
 		exit;
 	}
+
+	public static function poop($value)
+	{
+		echo sprintf('<script type="text/javascript">console.log(%s)</script>', json_encode($value));
+	}
 }

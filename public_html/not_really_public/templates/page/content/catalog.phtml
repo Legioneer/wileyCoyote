@@ -1,9 +1,75 @@
+<style>
+table.cart {
+	width: 100%;
+}
+.cart td {
+	border: 1px solid #CCC;
+}
+.cart-item .img {
+	max-height: 50px;
+}
+</style>
 <h2>Catalog</h2>
 
 <p>Please select one of our items:</p>
 
-<select name="productId">
-<?php foreach ($productSelectOptions as $value => $text): ?>
-	<option value="<?php echo $value ?>"<?php if ($productId == $value): ?> selected="selected"<?php endif ?>><?php echo $text ?></option>
+<form action="" method="post">
+	<p>
+		<select name="productId">
+<?php foreach ($products as $id => $product): ?>
+			<option value="<?php echo $id ?>" <?php if ($productId == $id): ?> selected="selected"<?php endif ?>>
+				<?php echo $product['name'] ?>
+			</option>
 <?php endforeach ?>
-</select>
+		</select>
+	</p>
+
+
+	<!-- buttons -->
+	<p>
+		<button type="submit" name="cart_action" value="add">Add</button>
+		<button type="submit" name="cart_action" value="remove">Remove</button>
+		<button type="submit" name="cart_action" value="clear">Clear</button>
+	</p>
+
+	<!-- cart items -->
+	<table id="cart" border="1" width="100%">
+		<thead>
+			<tr>
+				<th colspan="2">Item</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+<?php if (empty($cart['items'])): ?>
+		<tbody>
+			<tr>
+				<td colspan="5">You have no items in your shopping cart.</td>
+			</tr>
+		</tbody>
+<?php else: ?>
+		<tfoot>
+			<tr>
+				<td colspan="4">&nbsp;</td>
+				<td><?php echo $cart['total'] ?></td>
+			</tr>
+		</tfoot>
+		<tbody>
+	<?php foreach ($cart['items'] as $item): ?>
+	<?php poop($item) ?>
+			<tr class="cart-item">
+				<td><img class="img" src="<?php echo $products[$item['productId']]['img_url'] ?>" /></td>
+				<td>
+					<b><?php echo $products[$item['productId']]['name'] ?></b>
+					<br /><?php echo $products[$item['productId']]['description'] ?>
+				</td>
+				<td><?php echo $products[$item['productId']]['price'] ?></td>
+				<td><?php echo $item['quantity'] ?></td>
+				<td><?php echo $item['total'] ?></td>
+			</tr>
+	<?php endforeach ?>
+		</tbody>
+<?php endif ?>
+	</table>
+</form>
