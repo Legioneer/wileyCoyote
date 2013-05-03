@@ -1,11 +1,6 @@
 <?php
 
-/*
- * SETUP
- */
-
-// autoloading
-require_once __DIR__ . '/not_really_public/vendor/autoload.php';
+require_once __DIR__ . '/not_really_public/bootstrap.php';
 
 
 /*
