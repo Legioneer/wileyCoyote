@@ -1,0 +1,22 @@
+<h2>Login</h2>
+
+<form action="" method="post">
+
+<?php if (!$loginValid): ?>
+	<p>Invalid username or password. Please try again.</p>
+<?php endif ?>
+
+	<p>
+		<label>Username</label>
+		<input type="text" name="login[username]" />
+	</p>
+
+	<p>
+		<label>Password</label>
+		<input type="password" name="login[password]" />
+	</p>
+
+	<p>
+		<button type="submit">Login</button> or <a href="contact.php">Create an Account</a>
+	</p>
+</form>
